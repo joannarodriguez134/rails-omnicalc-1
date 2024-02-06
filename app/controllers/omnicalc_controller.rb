@@ -12,6 +12,8 @@ class OmnicalcController < ApplicationController
   end
 
   def square_results
+    @the_num = params.fetch("user_num").to_f
+    @the_result = @the_num ** 2
     render({ template: "calc_templates/calc_square"} )
   end
 
