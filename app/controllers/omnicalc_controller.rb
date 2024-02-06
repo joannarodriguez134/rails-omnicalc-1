@@ -8,7 +8,7 @@ class OmnicalcController < ApplicationController
   end
 
   def square_calc
-    render( { template: "calc_templates/square_new"})
+    render( { template: "calc_templates/home"})
   end
 
 
