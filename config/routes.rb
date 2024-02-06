@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get("/square/results", { :controller => "omnicalc", :action => "square_results"})
 
+  get("/payment/new", { controller: "omnicalc", action: "payment_new"})
+
   
   
 end

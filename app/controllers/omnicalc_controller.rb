@@ -17,5 +17,9 @@ class OmnicalcController < ApplicationController
     render({ template: "calc_templates/calc_square"} )
   end
 
+  def payment_new
+    render(template: "calc_templates/calc_payment")
+  end
+
 
 end
