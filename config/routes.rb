@@ -8,6 +8,6 @@ Rails.application.routes.draw do
 
   get("/payment/new", { controller: "omnicalc", action: "payment_new"})
 
-  
+  get("/payment/new/results", { controller: "omnicalc", action: "payment_new_results"})
   
 end
