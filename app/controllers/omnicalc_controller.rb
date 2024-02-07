@@ -17,6 +17,17 @@ class OmnicalcController < ApplicationController
     render({ template: "calc_templates/calc_square"} )
   end
 
+  def square_root_calc
+    render(template: "calc_templates/calc_square_root")
+  end
+
+  def square_root_results
+    @the_num = params.fetch("users_number").to_f 
+    @the_result = Math.sqrt(@the_num)
+    render(template: "calc_templates/calc_square_root_results")
+
+  end
+
   def payment_new
     render(template: "calc_templates/calc_payment")
   end
@@ -31,6 +42,17 @@ class OmnicalcController < ApplicationController
   @payment_principal = principal.to_fs(:currency, { :precision => 2 })
   @monthly_payment = monthly_payment.to_fs(:currency, { :precision => 2 }) # Format the result
     render(template: "calc_templates/calc_payment_results")
+  end
+
+  def random_new
+    render( template: "calc_templates/calc_random")
+  end
+
+  def random_results
+    @min_num = params.fetch("user_min").to_f
+    @max_num = params.fetch("user_max").to_f
+    @random_num = rand(@min_num .. @max_num)
+    render( template: "calc_templates/calc_random_results")
   end
 
 
